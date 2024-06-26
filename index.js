@@ -6,9 +6,9 @@ const bodyParser = require('body-parser');
 const methodOverride = require('method-override');
 const session = require('express-session');
 
-const MICROSOFT_GRAPH_CLIENT_ID = 'e8977818-584e-446a-a158-c668f36106fa';
-const MICROSOFT_GRAPH_CLIENT_SECRET = '616cde65-1751-49e3-8568-7248b78b09a8';
-const MICROSOFT_GRAPH_TENANT_ID = '336a1d34-4508-4a74-ac8a-d0e6becabf62';
+const MICROSOFT_GRAPH_CLIENT_ID = process.env.MICROSOFT_GRAPH_CLIENT_ID;
+const MICROSOFT_GRAPH_CLIENT_SECRET = process.env.MICROSOFT_GRAPH_CLIENT_SECRET;
+const MICROSOFT_GRAPH_TENANT_ID = process.env.MICROSOFT_GRAPH_TENANT_ID;
 
 passport.serializeUser((user, done) => {
     done(null, user);
