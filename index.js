@@ -60,8 +60,9 @@ app.get('/auth/microsoft', passport.authenticate('microsoft', {
 app.get('/auth/microsoft/callback', 
     passport.authenticate('microsoft', { failureRedirect: '/'}),
     (req, res) => {
-        
-        res.json({req: req.body});
+        console.log('req => ',req)
+        console.log('res =>',res)
+        res.json({req: req.user});
     }
 );
 app.get('/profile', (req, res) => {
