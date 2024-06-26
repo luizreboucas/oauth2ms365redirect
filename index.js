@@ -1,3 +1,4 @@
+const dotenv = require('dotenv').config()
 const express = require('express');
 const passport= require('passport');
 const MicrosoftStrategy = require('passport-microsoft').Strategy;
@@ -10,6 +11,7 @@ const MICROSOFT_GRAPH_CLIENT_ID = process.env.MICROSOFT_GRAPH_CLIENT_ID;
 const MICROSOFT_GRAPH_CLIENT_SECRET = process.env.MICROSOFT_GRAPH_CLIENT_SECRET;
 const MICROSOFT_GRAPH_TENANT_ID = process.env.MICROSOFT_GRAPH_TENANT_ID;
 
+console.log(process.env.MICROSOFT_GRAPH_CLIENT_ID)
 passport.serializeUser((user, done) => {
     done(null, user);
 })
