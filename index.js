@@ -61,7 +61,7 @@ app.get('/auth/microsoft/callback',
     passport.authenticate('microsoft', { failureRedirect: '/'}),
     (req, res) => {
         
-        res.json({req, res});
+        res.json({req: req.body});
     }
 );
 app.get('/profile', (req, res) => {
