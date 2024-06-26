@@ -23,7 +23,7 @@ passport.use(new MicrosoftStrategy({
     clientSecret: MICROSOFT_GRAPH_CLIENT_SECRET,
     scope: ['user.read'],
     tenant: MICROSOFT_GRAPH_TENANT_ID,
-    callbackURL: 'http://localhost:4000/auth/microsoft/callback',
+    callbackURL: 'https://oauth2ms365redirect.onrender.com/auth/microsoft/callback',
     addUPNAsEmail: true
 },
 (accessToken, refreshToke, profile, done) => {
